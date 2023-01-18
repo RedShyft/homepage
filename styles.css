@@ -2,6 +2,7 @@
 
 :root {
   --color-primary: #b8144b;
+  --color-primary-shade: #A90F42;
   --color-bg-light: #f0f5fa;
   --color-text-dark: #0a2540;
   --color-text-light: #425466;
@@ -12,6 +13,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  background-color: #F6F9FC;
 }
 
 h1,
@@ -26,7 +28,7 @@ h6 {
 
 h1 {
   font-size: 56px;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 
 p {
@@ -50,13 +52,45 @@ Header .logo {
   max-width: 160px;
 }
 
+section {
+  padding: 64px 0;
+}
+
+section.dark {
+  background-color: var(--color-bg-light);
+}
+
 section .inner {
+  padding: 0 12px;
   max-width: var(--width-page);
   margin: 0 auto;
 }
 
 section .hero {
-  margin: 96px auto;
+  margin: 24px auto;
+}
+
+a.button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 48px;
+}
+
+a.button:hover {
+  background-color: var(--color-primary-shade);
+}
+
+a.button:focus {
+  outline: 2px solid var(--color-primary);
+}
+
+a.button img {
+  margin-left: 12px;
 }
 
 /* Utility classes */
@@ -77,4 +111,8 @@ section .hero {
 
 .col-50 {
   flex: 1 1 50%;
+}
+
+.mt-48 {
+  margin-top: 48px;
 }
