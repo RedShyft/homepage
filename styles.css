@@ -2,8 +2,8 @@
 
 :root {
   --color-primary: #b8144b;
-  --color-primary-shade: #A90F42;
-  --color-bg-light: #f0f5fa;
+  --color-primary-shade: #a90f42;
+  --color-bg-light: #f5f4f5;
   --color-text-dark: #0a2540;
   --color-text-light: #425466;
 
@@ -13,7 +13,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  background-color: #F6F9FC;
+  background-color: #f9f9f9;
 }
 
 h1,
@@ -31,9 +31,20 @@ h1 {
   margin-bottom: 48px;
 }
 
+h2 {
+  font-size: 22px;
+  margin-bottom: 48px;
+  color: var(--color-primary);
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
 p {
   font-size: 20px;
-  line-height: 1.4em;
+  line-height: 1.55em;
   color: var(--color-text-light);
 }
 
@@ -101,6 +112,10 @@ a.button img {
   gap: 24px;
 }
 
+.flex.align-top {
+  align-items: flex-start;
+}
+
 .col-25 {
   flex: 1 1 25%;
 }
@@ -115,4 +130,15 @@ a.button img {
 
 .mt-48 {
   margin-top: 48px;
+}
+
+.table-cell {
+  padding: 16px;
+  font-size: 22px;
+  text-align: center;
+  background-color: var(--color-bg-light);
+}
+
+.table-cell.heading {
+  font-weight: 900;
 }
