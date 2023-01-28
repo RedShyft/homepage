@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
 
 :root {
   --color-primary: #b8144b;
@@ -22,19 +22,24 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 900;
+  font-weight: 500;
   color: var(--color-text-dark);
 }
 
 h1 {
   font-size: 56px;
+  font-weight: 900;
   margin-bottom: 48px;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 26px;
   margin-bottom: 48px;
   color: var(--color-primary);
+}
+
+h2.subtitle {
+  margin-bottom: 16px;
 }
 
 h3 {
@@ -43,7 +48,7 @@ h3 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.55em;
   color: var(--color-text-light);
 }
@@ -64,21 +69,38 @@ Header .logo {
 }
 
 section {
-  padding: 64px 0;
+  padding: 96px 0;
 }
 
 section.dark {
   background-color: var(--color-bg-light);
 }
 
+section.footer {
+  padding: 24px 0;
+}
+
 section .inner {
-  padding: 0 12px;
+  padding: 0 24px;
   max-width: var(--width-page);
   margin: 0 auto;
 }
 
 section .hero {
-  margin: 24px auto;
+  margin: 12px auto;
+}
+
+section .hero p {
+  font-size: 20px;
+}
+
+.hero-image {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 360px;
 }
 
 a.button {
@@ -104,6 +126,20 @@ a.button img {
   margin-left: 12px;
 }
 
+.spindle {
+  max-width: 100%;
+}
+
+.icon {
+  margin-bottom: 16px;
+}
+
+.icon img {
+  width: 24px;
+  height: 24px;
+  filter: invert(0.5) sepia(1) saturate(75) hue-rotate(27deg);
+}
+
 /* Utility classes */
 .flex {
   display: flex;
@@ -112,8 +148,17 @@ a.button img {
   gap: 24px;
 }
 
+.flex.small {
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
 .flex.align-top {
   align-items: flex-start;
+}
+
+.flex.justify-center {
+  justify-content: center;
 }
 
 .col-25 {
@@ -128,17 +173,43 @@ a.button img {
   flex: 1 1 50%;
 }
 
+.col-66 {
+  flex: 1 1 66.666%;
+}
+
 .mt-48 {
   margin-top: 48px;
 }
 
+.mb-48 {
+  margin-bottom: 48px;
+}
+
 .table-cell {
   padding: 16px;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
-  background-color: var(--color-bg-light);
+  border: 1px solid #e7e7e7;
+}
+
+.table-cell.empty {
+  border: none;
 }
 
 .table-cell.heading {
   font-weight: 900;
+  border: none;
+  border-color: var(--color-bg-light);
+  background-color: var(--color-bg-light);
+}
+
+.table-cell.left {
+  text-align: left;
+  font-weight: 500;
+  border-color: var(--color-bg-light);
+  background-color: var(--color-bg-light);
+}
+
+.table-cell.heading.pro {
+  color: var(--color-primary);
 }
