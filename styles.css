@@ -16,6 +16,13 @@ body {
   background-color: #f9f9f9;
 }
 
+a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -186,6 +193,7 @@ a.button img {
 }
 
 .table-cell {
+  color: var(--color-text-light);
   padding: 16px;
   font-size: 18px;
   text-align: center;
@@ -212,4 +220,59 @@ a.button img {
 
 .table-cell.heading.pro {
   color: var(--color-primary);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  Header {
+    padding: 8px;
+  }
+
+  Header .logo {
+    max-width: 100px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    line-height: 1.2em;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  a.button {
+    padding: 8px 16px;
+  }
+
+  .hero-image img {
+    max-width: 240px;
+  }
+
+  section {
+    padding: 36px 0;
+  }
+
+  section .inner {
+    padding: 0 12px;
+  }
+
+  .table-cell {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex.no-collapse {
+    flex-direction: row;
+  }
 }
